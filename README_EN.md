@@ -57,18 +57,18 @@ pnpm run dev:antd
 pnpm run build:antd
 ```
 
-## 🧩 Backend Source Merge & Runpad Deployment
+## 🧩 Backend Source Merge & RunPod Deployment
 
 ### Merge backend source
-1. Merge the backend repository into `backend/` at the project root (example path; adjust per your team).
+1. Merge ruoyi-admin and ruoyiai into a single project, then merge the backend repository into `backend/` at the project root (example path; adjust per your team).
 2. Keep dependencies isolated: frontend continues to use `pnpm`, backend keeps its own build/runtime.
 3. Update frontend env variables (e.g. `VITE_API_URL` in `.env*`) to point to the backend URL.
 
-### Runpad deployment (after merge)
-1. Ensure Runpad source is merged under `backend/runpad` (or your agreed-upon path).
-2. Follow Runpad's README/deploy scripts for env vars (database, cache, secrets).
-3. Start Runpad service or container on the server, ensuring ports do not conflict with the main backend (check the port settings in the Runpad README/config).
-4. Configure the backend to point to the Runpad service URL (for example `RUNPAD_SERVICE_URL` in `backend/.env` or `backend/config/*.yml`, based on your backend setup).
+### RunPod deployment (after merge)
+1. Ensure RunPod source is merged under `backend/runpod` (or your agreed-upon path).
+2. Follow RunPod's README/deploy scripts for env vars (database, cache, secrets).
+3. Start RunPod service or container on the server, ensuring ports do not conflict with the main backend (check the port settings in the RunPod README/config).
+4. Configure the backend to point to the RunPod service URL (for example `RUNPOD_SERVICE_URL` in `backend/.env` or `backend/config/*.yml`, based on your backend setup).
 
 ## 📝 Important Notes
 
