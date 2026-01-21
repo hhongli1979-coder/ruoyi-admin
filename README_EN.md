@@ -65,9 +65,9 @@ pnpm run build:antd
 3. Update frontend env variables (e.g. `VITE_API_URL` in `.env*`) to point to the backend URL.
 
 ### Runpad deployment (after merge)
-1. Ensure Runpad source is merged under `backend/runpad` (or your agreed path).
+1. Ensure Runpad source is merged under `backend/runpad` (or your agreed-upon path).
 2. Follow Runpad's README/deploy scripts for env vars (database, cache, secrets).
-3. Start Runpad service or container on the server, ensuring ports do not conflict with the main backend.
+3. Start Runpad service or container on the server, ensuring ports do not conflict with the main backend (check the port settings in the Runpad README/config).
 4. Configure the backend to point to the Runpad service URL for integration.
 
 ## 📝 Important Notes
