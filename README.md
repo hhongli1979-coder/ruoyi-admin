@@ -68,7 +68,7 @@ pnpm run build:antd
 1. 确保 Runpad 源码随后台合并到 `backend/runpad`（或团队约定路径）。
 2. 按 Runpad 目录中的 README/部署脚本配置环境变量（数据库、缓存、密钥等）。
 3. 在服务器上执行 Runpad 的启动命令或容器部署命令，确认端口与后台主服务不冲突（按 Runpad README 中的端口配置检查）。
-4. 在后台配置中填写 Runpad 服务地址（参考后端配置文件或环境变量的服务地址字段），确保联调正常。
+4. 在后台配置中填写 Runpad 服务地址（例如 `backend/.env` 或 `backend/config/*.yml` 中的 `RUNPAD_SERVICE_URL`，以实际后端配置为准），确保联调正常。
 
 ## 📝 注意事项
 
