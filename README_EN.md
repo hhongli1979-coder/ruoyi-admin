@@ -57,6 +57,19 @@ pnpm run dev:antd
 pnpm run build:antd
 ```
 
+## 🧩 Backend Source Merge & Runpad Deployment
+
+### Merge backend source
+1. Merge the backend repository into `backend/` at the project root (example path; adjust per your team).
+2. Keep dependencies isolated: frontend continues to use `pnpm`, backend keeps its own build/runtime.
+3. Update frontend env variables (e.g. `VITE_API_URL` in `.env*`) to point to the backend URL.
+
+### Runpad deployment (after merge)
+1. Ensure Runpad source is merged under `backend/runpad` (or your agreed path).
+2. Follow Runpad's README/deploy scripts for env vars (database, cache, secrets).
+3. Start Runpad service or container on the server, ensuring ports do not conflict with the main backend.
+4. Configure the backend to point to the Runpad service URL for integration.
+
 ## 📝 Important Notes
 
 1. **Node.js Version**: Please ensure you're using Node.js 20.10.0 or higher
