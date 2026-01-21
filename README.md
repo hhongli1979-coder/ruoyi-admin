@@ -57,6 +57,19 @@ pnpm run dev:antd
 pnpm run build:antd
 ```
 
+## 🧩 后端源码合并与 RunPod 部署
+
+### 后端源码合并
+1. 将 ruoyi-admin 与 ruoyiai 合并为同一个项目，并将后端仓库合并到当前项目根目录的 `backend/`（示例路径，可按团队约定调整）。
+2. 保持前后端依赖独立：前端继续使用 `pnpm`，后端保持原有构建/运行方式。
+3. 按后端地址更新前端环境变量（例如 `.env*` 中的 `VITE_API_URL`）。
+
+### RunPod 部署（合并后）
+1. 确保 RunPod 源码随后台合并到 `backend/runpod`（或团队约定路径）。
+2. 按 RunPod 目录中的 README/部署脚本配置环境变量（数据库、缓存、密钥等）。
+3. 在服务器上执行 RunPod 的启动命令或容器部署命令，确认端口与后台主服务不冲突（按 RunPod README 中的端口配置检查）。
+4. 在后台配置中填写 RunPod 服务地址（例如 `backend/.env` 或 `backend/config/*.yml` 中的 `RUNPOD_SERVICE_URL`，以实际后端配置为准），确保联调正常。
+
 ## 📝 注意事项
 
 1. **Node.js 版本**：请确保使用 Node.js 20.10.0 或更高版本

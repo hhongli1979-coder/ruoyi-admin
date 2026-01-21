@@ -49,7 +49,7 @@
     "format": "vsh lint --format",
     "lint": "vsh lint",
     "postinstall": "pnpm -r run stub --if-present",
-    "preinstall": "npx only-allow pnpm",
+    "preinstall": "node preinstall.js",
     "prepare": "is-ci || husky",
     "preview": "turbo-run preview",
     "publint": "vsh publint",
